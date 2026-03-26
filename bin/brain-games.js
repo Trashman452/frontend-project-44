@@ -1,2 +1,10 @@
 #!/usr/bin/env node
-console.log("Welcome to the Brain Games!")
+import getName from '../src/cli.js'
+
+export default function app() {
+  console.log('Welcome to the Brain Games!')
+
+  getName()
+}
+
+app()
