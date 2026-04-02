@@ -13,12 +13,12 @@ function getRandomNumber (min, max) {
 
 export default function isEvenGame () {
     console.log('Welcome to the Brain Games!')
-    
+
     const name = getName()
 
     console.log("Answer \"yes\" if the number is even, otherwise answer \"no\".")
 
-    for (let tryes = 1; tryes <= 3; tryes += 1) {
+    for (let i = 1; i <= 3; i += 1) {
         const randomNumber = getRandomNumber(1, 100)
         const correctAnswer = isEven(randomNumber) ? "yes" : "no"
 
@@ -30,12 +30,12 @@ export default function isEvenGame () {
 
         else {
             console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}"`)
-            console.log(`Let's try again, ${name}`)
+            console.log(`Let's try again, ${name}!`)
             return
         }
     }
 
-    console.log(`Congratulations, ${name}`)
+    console.log(`Congratulations, ${name}!`)
 }
 
 isEvenGame()
