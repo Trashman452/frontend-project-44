@@ -4,11 +4,10 @@ import getName from '../src/cli.js'
 import readlineSync from 'readline-sync'
 import _ from 'lodash'
 
-const index = _.random(1, 20)
-const start = _.random(1, 100)
-const length = _.random(5, 12)
-
 function getProgression () {
+    const index = _.random(1, 20)
+    const start = _.random(1, 100)
+    const length = _.random(5, 12)
     const result = []
 
     for (let i = 0; i < length; i += 1) {
@@ -28,7 +27,7 @@ function getCorrectAnswer (prog) {
     const i = arr[1] - arr[0]
     const unfined = arr.indexOf("..")
 
-    return arr[unfined] + i
+    return Number(arr[unfined - 1]) + i
 }
 
 export default function progressionGame () {
@@ -46,7 +45,7 @@ export default function progressionGame () {
 
         const answer = readlineSync.question("Your answer: ").trim().toLowerCase()
 
-        if (correctAnswer === answer) console.log("Correct!")
+        if (correctAnswer == answer) console.log("Correct!")
         
         else {
             console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}"`)
