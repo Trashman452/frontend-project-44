@@ -14,7 +14,7 @@ function getProgression () {
         result.push(start + (i * index))
     }
 
-    const hiddenIndex = _.random(1, result.length)
+    const hiddenIndex = _.random(3, result.length)
 
     result[hiddenIndex] = ".."
 
